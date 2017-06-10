@@ -57,7 +57,9 @@ services:
       - ./parity/config:/parity/config:ro
       - ./parity/keys:/root/.local/share/io.parity.ethereum/keys/${NETWORK_NAME}
     ports:
+      - 8181:8181
       - 8180:8180
+      - 8081:8081
     networks:
       app_net:
         ipv4_address: 172.16.0.20

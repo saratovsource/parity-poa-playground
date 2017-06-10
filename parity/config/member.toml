@@ -16,3 +16,8 @@ bootnodes = [
 
 [ui]
 interface = "0.0.0.0"
+port = 8181
+
+[dapps]
+interface = "0.0.0.0"
+port = 8081
