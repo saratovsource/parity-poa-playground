@@ -104,6 +104,18 @@ services:
       app_net:
         ipv4_address: 172.16.0.200
 
+  web:
+    image: evrone/evrone_wallet:v01
+    environment:
+      JSON_RPC_ADDRESS: http://authority0:8545
+    ports:
+      - 2300:80
+    networks:
+      app_net:
+        ipv4_address: 172.16.0.15
+    depends_on:
+      - authority0
+
 volumes:
   authority0:
   authority1:
